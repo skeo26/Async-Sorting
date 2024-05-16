@@ -1,0 +1,20 @@
+﻿<Window x:Class="AsyncMergeSortWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncMergeSortWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="870">
+    <Grid Background="Bisque" Margin="0,0,0,-117">
+        <Button x:Name="buttonStartSort" Content="Старт сортировки" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Click="buttonStartSort_Click" Margin="10,10,0,0" Background="LemonChiffon"/>
+        <TextBlock x:Name="txtStatus" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Slider x:Name="sliderArraySize" HorizontalAlignment="Left" Margin="0,215,0,0" VerticalAlignment="Top" Width="776" Minimum="1000" Maximum="100000" TickFrequency="1000" IsSnapToTickEnabled="True" ValueChanged="SliderArraySize_ValueChanged"/>
+        <TextBlock x:Name="txtArraySize" HorizontalAlignment="Left" Margin="10,238,0,0" TextWrapping="Wrap" Text="Размер Массива: 1000" VerticalAlignment="Top"/>
+        <Button x:Name="buttonBlockSort" Content="Блокирующая Сортировка" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="190" Click="buttonBlockSort_Click" Background="LemonChiffon"/>
+        <Button x:Name="buttonWhen" Content="Сортировка (WhenAny + WhenAll)" HorizontalAlignment="Left" Margin="350,10,0,0" VerticalAlignment="Top" Width="200" Click="buttonWhen_Click" Background="Lavender"/>
+        <Button x:Name="buttonWait" Content="Сортировка (WaitAny + WaitAll)" HorizontalAlignment="Left" Margin="560,10,0,0" VerticalAlignment="Top" Width="180" Click="buttonWait_Click" Background="MistyRose"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="745,10,0,0" VerticalAlignment="Top" Width="120" Click="buttonCancel_Click" Background="LightCyan"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="23" Margin="10,318,0,0" VerticalAlignment="Top" Width="776" Visibility="Visible"/>
+    </Grid>
+</Window>
